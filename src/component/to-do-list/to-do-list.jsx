@@ -22,7 +22,6 @@ export default function ToDoList() {
   // handle input changes
   function handleOnChange(event) {
     setNewTask(event.target.value);
-    console.log(newTask);
   }
 
   // Function to generate a unique ID for tasks
@@ -35,7 +34,6 @@ export default function ToDoList() {
   function handleAddTask() {
     if (!!newTask) {
       const newTaskItem = { id: generateId(), task: newTask, completed: false };
-      console.log(newTaskItem.id);
       setTasks([...tasks, newTaskItem]);
     }
     setNewTask("");
